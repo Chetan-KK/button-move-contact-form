@@ -74,3 +74,8 @@ button:hover {
 .invalid {
   box-shadow: 0 0 10px 1px var(--invalid-bg);
 }
+@media screen and (max-width: 500px) {
+  .button {
+    display: none;
+  }
+}

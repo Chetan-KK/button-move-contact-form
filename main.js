@@ -49,10 +49,12 @@ emailI.addEventListener('input', () => {
 function valid(element) {
     element.classList.remove('invalid');
     element.classList.add('valid');
+    butDisplay();
 }
 function invalid(element) {
     element.classList.add('invalid');
     element.classList.remove('valid');
+    butDisplay();
 }
 
 
@@ -69,3 +71,13 @@ button.addEventListener('mouseover', () => {
         }
     }
 });
+
+function butDisplay() {
+    if (window.innerWidth < 500) {
+        if (emailI.classList.contains('valid') && nameI.classList.contains('valid')) {
+            button.style.display = 'inline';
+        } else {
+            button.style.display = 'none';
+        }
+    }
+}
