@@ -1,0 +1,76 @@
+:root {
+  --fc: rgb(0, 0, 0);
+  --back: #ffffff;
+  --sec-bg: rgb(187, 241, 255);
+  --invalid-bg: rgb(255, 177, 177);
+  --valid: rgb(155, 255, 155);
+  --valid-h: rgb(82, 255, 82);
+  --ff: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.dark {
+  --fc: rgb(131, 131, 131);
+  --back: #222222;
+  --sec-bg: rgb(0, 53, 66);
+  --invalid-bg: rgb(73, 0, 0);
+  --valid: rgb(0, 54, 0);
+  --valid-h: rgb(0, 92, 0);
+  --ff: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  margin: 0;
+  background-color: var(--back);
+  color: var(--fc);
+  font-family: var(--ff);
+}
+.mode {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.contact {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+}
+.form {
+  display: grid;
+  grid-template-columns: calc(50px + 10vw) calc(100px + 40vw);
+  grid-gap: 1rem;
+}
+input,
+textarea {
+  background-color: var(--sec-bg);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+textarea {
+  resize: none;
+}
+button,
+.button {
+  width: fit-content;
+  background-color: var(--valid);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  color: var(--fc);
+  cursor: pointer;
+  transition: 100ms;
+}
+button:hover {
+  background-color: var(--valid-h);
+}
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px var(--fc);
+}
+.valid {
+  box-shadow: 0 0 10px 1px var(--valid-h);
+}
+.invalid {
+  box-shadow: 0 0 10px 1px var(--invalid-bg);
+}
