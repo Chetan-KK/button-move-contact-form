@@ -1,6 +1,6 @@
 :root {
-  --fc: rgb(0, 0, 0);
-  --back: #ffffff;
+  --fc: #242424;
+  --back: #f3f3f3;
   --sec-bg: rgb(187, 241, 255);
   --invalid-bg: rgb(255, 177, 177);
   --valid: rgb(155, 255, 155);
