@@ -1,6 +1,7 @@
 :root {
   --fc: #242424;
   --back: #f3f3f3;
+  --back-img:30deg,rgb(89, 89, 89),rgb(255, 255, 255);
   --sec-bg: rgb(187, 241, 255);
   --invalid-bg: rgb(255, 177, 177);
   --valid: rgb(155, 255, 155);
@@ -10,6 +11,7 @@
 .dark {
   --fc: rgb(131, 131, 131);
   --back: #222222;
+  --back-img:30deg,rgb(95, 95, 95),black;
   --sec-bg: rgb(0, 53, 66);
   --invalid-bg: rgb(73, 0, 0);
   --valid: rgb(0, 54, 0);
@@ -18,7 +20,8 @@
 }
 body {
   margin: 0;
-  background-color: var(--back);
+  background-image: linear-gradient(var(--back-img));
+  min-height: 100vh;
   color: var(--fc);
   font-family: var(--ff);
 }
@@ -28,7 +31,7 @@ body {
   right: 10px;
 }
 .contact {
-  margin-top: 3rem;
+  padding-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,6 +47,7 @@ input,
 textarea {
   background-color: var(--sec-bg);
   border: none;
+  color: var(--fc);
   padding: 0.5rem 1rem;
   border-radius: 5px;
 }
